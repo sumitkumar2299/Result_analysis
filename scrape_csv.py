@@ -21,7 +21,7 @@ with open(filename, mode="w", newline='', encoding='utf-8') as file:
             print(f"No result found for RegNo: {reg_no}")
             continue
 
-        # Write header row before subjects for this reg number
+        # header row 
         writer.writerow([f"Result for RegNo: {reg_no}"])
         writer.writerow(["Subject_Code", "Subject_Name", "External", "Internal", "Total", "Grade", "Credit"])
 
@@ -40,7 +40,7 @@ with open(filename, mode="w", newline='', encoding='utf-8') as file:
 
                 writer.writerow([subject_code, subject_name, external, internal, total, grade, credit])
 
-        # Add a blank line between students
+        # Adding blank line between students. 
         writer.writerow([])
 
         time.sleep(1)

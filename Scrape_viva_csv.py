@@ -8,7 +8,7 @@ filename = "beup_practical_results_all_students_custom_format.csv"
 
 with open(filename, mode="w", encoding='utf-8') as file:
 
-    # Loop over registration numbers 01 to 62
+    # Looping registration number 1 to 62
     for i in range(1, 63):
         reg_no = f"22155135{str(i).zfill(3)}"
 

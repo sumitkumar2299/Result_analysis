@@ -16,7 +16,7 @@ else:
     print("table not found")
 
 
-# extract the data from the table
+# extracting data from the table 
 
 if table:
     rows = table.find_all("tr")

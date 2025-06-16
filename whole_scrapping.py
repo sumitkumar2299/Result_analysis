@@ -20,7 +20,7 @@ with open(filename, mode="w", newline='', encoding='utf-8') as file:
         table_theory = soup.find("table", id = "ContentPlaceHolder1_GridView1")
 
         if table_theory:
-            # Write RegNo header
+            #  header
             writer.writerow([f"Result for RegNo: {reg_no}"])
             writer.writerow(["Subject_Code", "Subject_Name", "External", "Internal", "Total", "Grade", "Credit"])
             
@@ -40,11 +40,11 @@ with open(filename, mode="w", newline='', encoding='utf-8') as file:
         else:
             print(f"No THEORY result found for RegNo: {reg_no}")
 
-        # ----------- PRACTICAL TABLE (GridView2) -------------
+        #PRACTICAL TABLE
         table_practical = soup.find("table", id = "ContentPlaceHolder1_GridView2")
 
         if table_practical:
-            # Write PRACTICAL section header
+            # Writing PRACTICAL section header
             writer.writerow(["PRACTICAL Results"])
             writer.writerow(["Subject_Code", "Subject_Name", "External", "Internal", "Total", "Grade", "Credit"])
             
@@ -64,7 +64,7 @@ with open(filename, mode="w", newline='', encoding='utf-8') as file:
         else:
             print(f"No PRACTICAL result found for RegNo: {reg_no}")
 
-        # Add a blank line between students
+        # Adding blank line section between studnets 
         writer.writerow([])
         writer.writerow([])
 
